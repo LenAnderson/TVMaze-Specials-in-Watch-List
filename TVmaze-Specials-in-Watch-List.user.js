@@ -2,7 +2,7 @@
 // @name         TVmaze - Specials in Watch List
 // @namespace    https://github.com/LenAnderson
 // @downloadURL  https://github.com/LenAnderson/TVmaze-Specials-in-Watch-List
-// @version      0.1
+// @version      0.2
 // @description  Show special episodes in watch list
 // @author       LenAnderson
 // @match        https://www.tvmaze.com/watchlist
@@ -35,7 +35,7 @@
             return {
                 show: html.querySelector('.breadcrumbs > li:last-child > a').href.replace(/^.+shows\/(\d+)\/.+$/, '$1'),
                 showTitle: html.querySelector('.breadcrumbs > li:last-child').previousElementSibling.textContent,
-                episodes: Array.from(html.querySelectorAll('#Specials + .grid-view > .table > tbody > tr')).filter(it => it.querySelector('.watch-dropdown').value == '')
+                episodes: Array.from(html.querySelectorAll('#Specials + .grid-view > .table > tbody > tr')).filter(it => it.querySelector('.watch-dropdown').value == '' || it.querySelector('.watch-dropdown').value == 1)
             };
         });
     };
