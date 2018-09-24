@@ -1,2 +1,2 @@
-# TVMaze-Specials-in-Watch-List
+# TVMaze - Specials in Watch List
 Show special episodes in watch list
